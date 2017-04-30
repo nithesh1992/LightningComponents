@@ -1,5 +1,6 @@
 public class QuickLeadConvert {
     public static Boolean isConverted;
+    
     @AuraEnabled
     public static String convertIt(String recordId) {
         Lead lead = [SELECT Id ,LastName,Company,Status, OwnerId,
@@ -17,6 +18,8 @@ public class QuickLeadConvert {
             System.Debug('Conversion Result: ' + result.isSuccess());
             if(result.isSuccess()){
                 isConverted = true;
+               
+               //ConnectApi.FeedElement feedElement = ConnectApi.ChatterFeeds.postFeedElement(Network.getNetworkId(), UserInfo.getUserId(), ConnectApi.FeedElementType.FeedItem, 'Lead '+ lead.LastName+' is Converetd Successfully!');
             }
             
         }

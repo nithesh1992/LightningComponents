@@ -1,0 +1,26 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForAllPageTypes"
+                access="global">
+    <aura:attribute name="height" type="Decimal" />
+    <aura:attribute name="weight" type="Decimal" />
+    <aura:attribute name="bmi" type="Decimal"/>
+    
+    <div class="slds-p-around_xx-small">
+        <div class="input">
+            <lightning:input aura:id="Height" type="double" label="Height (in cms):" value="{!v.height}"/>          
+            <lightning:input aura:id="Weight" type="double" label="Weight (in lbs):" value="{!v.weight}"/>
+        </div> 
+        <div class="slds-m-top_x-small">
+        	<lightning:button variant="brand" label="Get BMI" onclick="{! c.myAction }"/>
+        </div >               
+        <br/>
+        <div class="slds-m-top_x-medium slds-text-title_caps">
+            <ui:outputNumber value="{!v.bmi}" format=".00" />
+        </div>
+    </div>  
+    <div>
+    
+    </div>
+    
+    
+    
+</aura:component>

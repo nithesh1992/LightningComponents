@@ -1,26 +1,29 @@
-<aura:component implements="force:hasRecordId,flexipage:availableForAllPageTypes"
-                access="global">
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    
     <aura:attribute name="height" type="Decimal" />
     <aura:attribute name="weight" type="Decimal" />
     <aura:attribute name="bmi" type="Decimal"/>
     
-    <div class="slds-p-around_xx-small">
-        <div class="input">
-            <lightning:input aura:id="Height" type="double" label="Height (in cms):" value="{!v.height}"/>          
-            <lightning:input aura:id="Weight" type="double" label="Weight (in lbs):" value="{!v.weight}"/>
-        </div> 
-        <div class="slds-m-top_x-small">
-        	<lightning:button variant="brand" label="Get BMI" onclick="{! c.myAction }"/>
-        </div >               
-        <br/>
-        <div class="slds-m-top_x-medium slds-text-title_caps">
-            <ui:outputNumber value="{!v.bmi}" format=".00" />
-        </div>
-    </div>  
-    <div>
-    
-    </div>
-    
-    
+    <div>      
+        <div class="slds-p-around_xx-small slds-form slds-form_compound">
+            <div class="slds-form-element__row">            
+                <div class="slds-form-element slds-size_1-of-2">
+                    <lightning:input aura:id="Height" type="double" label="Height (in cms):" value="{!v.height}"/>                      
+                </div>
+                <div class="slds-form-element slds-size_1-of-2">
+                    <lightning:input aura:id="Weight" type="double" label="Weight (in lbs):" value="{!v.weight}"/>
+                </div> 
+                
+            </div>
+            <div class="slds-m-top_x-small slds-align_absolute-center">
+                <lightning:button variant="brand" label="Get BMI" onclick="{! c.myAction }"/>
+            </div >               
+            <br/>
+            <div class="slds-m-top_x-medium slds-text-title_caps slds-align_absolute-center">
+                {!v.bmi}
+            </div>
+            
+        </div>         
+    </div>      
     
 </aura:component>

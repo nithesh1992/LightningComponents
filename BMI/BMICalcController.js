@@ -1,10 +1,12 @@
 ({
-	myAction : function(component, event, helper) {
-		var weight = component.get("v.weight");
-        var height = component.get("v.height")/100;
-        console.log(weight + "lbs");
-        var bmi = (weight * 0.45)/Math.pow(height,2);
+    myAction : function(component, event, helper) {
+        var bmi = helper.getBMI(component.get("v.weight"), component.get("v.height"));
+        var cat = helper.getCategory(bmi);
+        console.log(cat);
         console.log(bmi);
-        component.set("v.bmi", bmi);
-	}
-})
+        var result = bmi+" --> "+cat+"!";
+        if(isNaN(bmi))
+            result = "";
+        component.set("v.bmi", result);
+    }
+ })

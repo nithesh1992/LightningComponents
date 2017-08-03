@@ -1,0 +1,18 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="content" type="String" access="global" default="" />
+    <aura:attribute name="background" type="String" access="global" default="Alizarin" />
+    <aura:attribute name="header" type="String" access="global" default="" />
+    <aura:attribute name="footer" type="String" access="global" default="" />
+    
+    <div  class="slds">
+        <div>
+            <div class="{!'Card' +' '+(v.background)}">
+                <span class="slds-align--absolute-center head">{!v.header}</span>
+                <div class="slds-align--absolute-center">                    
+                    <h1 class="customTypo" title="{!v.content}">{!v.content}</h1>
+                </div> 
+                <footer class="slds-card__footer slds-align--absolute-center head">{!v.footer}</footer>
+            </div> 
+        </div>         
+    </div>
+</aura:component>

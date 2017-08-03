@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="accountBoardController">
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="AccountInfo" type="Map" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div class="wrap">
+        <div class="slds-grid slds-grid--align-center">
+            <div class="slds-m-around_xx-small"> <c:numberCard content="{!v.AccountInfo.con}" footer="Contacts" background="carrot"/> </div>  
+            <div class="slds-m-around_xx-small"> <c:numberCard content="{!v.AccountInfo.opp}" footer="Opportunities"  background="midnight"/> </div> 
+            <div class="slds-m-around_xx-small"> <c:numberCard content="{!v.AccountInfo.cas}" footer="Cases"  background="turquoise"/> </div>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,39 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" controller="SentimentApex" >	
+    <ltng:require scripts="{!$Resource.progressbar}" />
+    <aura:attribute name="result" type="String" />
+    <aura:attribute name="percentDone" type="Integer" default="0" />
+    
+    <div aura:id="input" class="slds-box small" >
+        <div aura:id="panelList">
+            <header class="slds-m-bottom--small">
+                <div class="slds-media slds-media--center slds-m-bottom--small">
+                    <div class="slds-media__figure">
+                        <lightning:icon iconName="utility:answer" />
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-text-heading--small ">Sentiment Analysis using IBM Watson</h2>
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label slds-assistive-text" for="searchBox">Search</label>
+                    <div class="slds-form-element__control">
+                        <ui:inputText aura:id="Text2Analyze" class="slds-input" placeholder="Enter any text..." change="{!c.updateSearch}"/>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+    
+    <div aura:id="panelOutput" class="slds-grid slds-grid_align-center slds-m-top_large">
+        <div class="slds-size_1-of-3">                                 
+            <div data-reactroot="" class="slds-progress-bar slds-progress-bar_medium slds-progress-bar_circular" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{!v.percentDone}" role="progressbar">
+                <span class="slds-progress-bar__value" style="{!'width:'+v.percentDone+'%'}">
+                    <span class="slds-assistive-text">Progress: {!v.percentDone}%</span>
+                </span>
+            </div>
+        </div>        
+    </div>
+    <div class="slds-grid slds-grid_align-center slds-m-top_small">
+        <h3 class="slds-text-title_caps" title="Label">{!v.result}</h3>
+    </div>
+</aura:component>

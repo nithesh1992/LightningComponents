@@ -9,8 +9,8 @@ public class SentimentApex {
     }
     
     private static String getHttp (String url) {
-        String username = '68dfe1b7-dcd7-4263-a550-19356df90600';
-        String password = '7pOUum1qtIeB';
+        String username = 'username'; //your username
+        String password = 'pass'; //your password
         HttpRequest req = new HttpRequest();
         Http http = new Http();
         req.setMethod('GET');    

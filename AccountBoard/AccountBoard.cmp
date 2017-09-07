@@ -3,11 +3,7 @@
     <aura:attribute name="AccountInfo" type="Map" />
     
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-    <div class="wrap">
-        <div class="slds-grid slds-grid--align-center">
-            <div class="slds-m-around_xx-small"> <c:numberCard content="{!v.AccountInfo.con}" footer="Contacts" background="carrot"/> </div>  
-            <div class="slds-m-around_xx-small"> <c:numberCard content="{!v.AccountInfo.opp}" footer="Opportunities"  background="midnight"/> </div> 
-            <div class="slds-m-around_xx-small"> <c:numberCard content="{!v.AccountInfo.cas}" footer="Cases"  background="turquoise"/> </div>
-        </div>
-    </div>
+             <c:digiCard content="{!v.AccountInfo.con}" header="Contacts" icon="action:new_contact"/>   
+             <c:digiCard content="{!v.AccountInfo.opp}" header="Opportunity" icon="action:new_opportunity"/> 
+            <c:digiCard content="{!v.AccountInfo.cas}" header="Cases" icon="action:new_case"/> 
 </aura:component>

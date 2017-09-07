@@ -1,3 +1,4 @@
 # Account Board
 
-![Screenshot](https://i.imgur.com/Op2v8MK.png "Account Board Component on Account Page")
+![Screenshot](https://i.imgur.com/kS4MfDG.png "Account Board Component on Account Page")
+

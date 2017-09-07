@@ -1,0 +1,30 @@
+.THIS .card {
+    border-radius: 6px;
+    box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+    background-color: #FFFFFF;
+    color: #252422;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1; 
+}
+
+.THIS .content  {
+    padding: 5px 15px 10px 8px;
+}
+
+.THIS .icon_container  {
+    padding-top: 5px;
+}
+
+.THIS .number {
+    font-size: 9pt;
+}
+
+.THIS .header {
+    padding-top: 4px;
+    font-size: 10pt;
+}
+
+.THIS p{
+    margin : 0 0 4px 0;
+}

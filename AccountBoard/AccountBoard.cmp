@@ -3,7 +3,15 @@
     <aura:attribute name="AccountInfo" type="Map" />
     
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-             <c:digiCard content="{!v.AccountInfo.con}" header="Contacts" icon="action:new_contact"/>   
-             <c:digiCard content="{!v.AccountInfo.opp}" header="Opportunity" icon="action:new_opportunity"/> 
-            <c:digiCard content="{!v.AccountInfo.cas}" header="Cases" icon="action:new_case"/> 
+    <lightning:layout horizontalAlign="center">
+        <lightning:layoutItem flexibility="auto" padding="around-small">
+            <c:digiCard content="{!v.AccountInfo.con}" header="Contacts" icon="action:new_contact"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="auto" padding="around-small">
+            <c:digiCard content="{!v.AccountInfo.opp}" header="Opportunity" icon="action:new_opportunity"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="auto" padding="around-small">
+            <c:digiCard content="{!v.AccountInfo.cas}" header="Cases" icon="action:new_case"/>
+        </lightning:layoutItem>
+    </lightning:layout>     
 </aura:component>

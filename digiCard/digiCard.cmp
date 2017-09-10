@@ -1,24 +1,23 @@
 <aura:component >
-    <ltng:require styles="{!$Resource.bootstrap}" />
     <aura:attribute name="content" type="String" access="global" default="0" />
     <aura:attribute name="icon" type="String" access="global" default="action:fallback" />
-    <aura:attribute name="header" type="String" access="global" default="Header" />
-    <div class="col-lg-2 col-sm-6">
-        <div class="card">
-            <div class="content">
-                <div class="row">
-                    <div class="col-xs-5 icon_container">
+    <aura:attribute name="header" type="String" access="global" default="Digi Card" />
+    
+    <lightning:layout horizontalAlign="space">
+        <lightning:layoutItem flexibility="auto" padding="around-small">
+            <div class="card">
+                <lightning:layout horizontalAlign="space">
+                    <lightning:layoutItem flexibility="auto" padding="around-small" >
                         <lightning:icon size="large" iconName="{!v.icon}"/>
-                    </div>
-                    <div class="col-xs-7">
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" padding="around-small">
                         <div class="slds-text-align_right">
-                            <p class="header slds-text-title_caps"><em>{!v.header}</em></p>							
+                            <p class="header slds-text-title_caps"><em>{!v.header}</em></p>                         
                             <div class="slds-text-heading_large">{!v.content}</div>
-                        </div>                        
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
+                        </div>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </div>            
+        </lightning:layoutItem>
+    </lightning:layout>
 </aura:component>

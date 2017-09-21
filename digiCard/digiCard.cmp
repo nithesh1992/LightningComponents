@@ -7,13 +7,16 @@
         <lightning:layoutItem flexibility="auto" padding="around-small">
             <div class="card">
                 <lightning:layout horizontalAlign="space">
-                    <lightning:layoutItem flexibility="auto" padding="around-small" >
-                        <lightning:icon size="large" iconName="{!v.icon}"/>
+                    <lightning:layoutItem flexibility="auto" padding="horizontal-small" >
+                        <div class="slds-p-around_xx-small">
+                            <lightning:icon size="medium" iconName="{!v.icon}"/>
+                        </div>
+                        
                     </lightning:layoutItem>
-                    <lightning:layoutItem flexibility="auto" padding="around-small">
+                    <lightning:layoutItem flexibility="auto" padding="horizontal-small">
                         <div class="slds-text-align_right">
-                            <p class="header slds-text-title_caps"><em>{!v.header}</em></p>                         
-                            <div class="slds-text-heading_large">{!v.content}</div>
+                            <p class="header slds-text-title_caps"><em>{!v.header}</em></p>							
+                            <div class="slds-text-heading_medium">{!v.content}</div>
                         </div>
                     </lightning:layoutItem>
                 </lightning:layout>
